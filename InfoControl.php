@@ -67,11 +67,11 @@ class InfoControl extends \WP_Customize_Control {
 				<?php
 				if ( $this->title ) {
 					?>
-					<h1><?php echo $this->title; // WPCS: XSS ok. ?></h1>
+					<h1><?php echo esc_html( $this->title ); ?></h1>
 					<?php
 				}
 				?>
-				<p><?php echo $this->html; // WPCS: XSS ok. ?></p>
+				<p><?php echo wp_kses_post( $this->html ); ?></p>
 			</div>
 			<?php
 			$html = ob_get_clean();
