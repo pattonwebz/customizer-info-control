@@ -3,7 +3,7 @@
  * Class to add a very simple customizer control for outputting an html string.
  *
  * @package   PattonWebz Customizer Controls
- * @version   0.1.0
+ * @version   0.1.1
  * @since     0.1.0
  * @author    William Patton <will@pattonwebz.com>
  * @copyright Copyright (c) 2018-2019, William Patton
