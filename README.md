@@ -3,6 +3,12 @@ A simple control for using when you want to output a small informational section
 
 ## Using the class
 
+The control works just like any other custom class control in that you register a setting for it and the control and place it inside a section.
+
+The class looks at 2 specific keys that you pass into the args array when registering the control. The `title` key and the `html` key.
+
+The passed in value for `title` is wrapped inside an `<h1>` tag and the `html` is wrapped inside of a `<p>` tag at output time.
+
 ```
 // The control must go in a defined section.
 $wp_customize->add_section(
@@ -34,6 +40,9 @@ $wp_customize->add_control(
 	)
 );
 ```
+
+You can optionally override the wrappers added by passing in an `'override_wrapper' => 'true'` argument. This will output just raw `html` so you need to include your own wrappers and any title you may want directly in the html string.
+
 # Licence Information
 This package is licensed under GNU GPLv2 or later licence.
 
